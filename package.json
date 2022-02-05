@@ -1,0 +1,21 @@
+{
+  "name": "batu-poll-checker",
+  "version": "1.0.1",
+  "description": "Utility for monitoring the results of voting for orangutan Batu in the election of a New Year's mascot in Novosibirsk, Russia, february 2022",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "check": "node src/check",
+    "server": "node src/server"
+  },
+  "keywords": [],
+  "author": "bormaxi",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "chalk": "^4.1.0",
+    "express": "^4.17.1",
+    "puppeteer": "^5.4.1",
+    "moment": "^2.29.1"
+  }
+}
