@@ -1,7 +1,11 @@
 const puppeteer = require("puppeteer");
 const moment = require("moment");
+const fs = require("fs");
 
-async function checkPollGosuslugi(pollNumber, arrAnswers) {
+
+
+async function checkPollGosuslugi(pollNumber, arrAnswers) {  
+
     const browser = await puppeteer.launch({
         headless: false,
         args: ['--start-maximized'],
@@ -20,6 +24,11 @@ async function checkPollGosuslugi(pollNumber, arrAnswers) {
             `https://pos.gosuslugi.ru/lkp/projects/${pollNumber}/09/${arrAnswers[i]}`,
             { defaultViewPort: null, waitUntil: "networkidle2" }
         );
+        await fs.promises.mkdir(`./results/gosuslugi/${pollNumber}/${arrAnswers[i]}/`, { recursive: true }, (err) => {
+            if (err) {
+                console.log(err);
+            }
+        });
         await page.screenshot({
             path: `./results/gosuslugi/${pollNumber}/${arrAnswers[i]}/${pollNumber}_${arrAnswers[i]}_${moment().format("YYYY-MM-DD_HH-mm-ss")}.jpeg`
         });
