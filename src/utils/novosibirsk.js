@@ -1,7 +1,13 @@
 const puppeteer = require("puppeteer");
 const moment = require("moment");
+const fs = require("fs");
 
 async function checkPollNovosibirsk(pollNumber) {
+    await fs.promises.mkdir(`./results/novosibirsk/${pollNumber}`, { recursive: true }, (err) => {
+        if (err) {
+            console.log(err);
+        }
+    });
     const browser = await puppeteer.launch({
         headless: false,
         args: ['--start-maximized'],
