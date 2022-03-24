@@ -38,6 +38,8 @@ Utility for monitoring the results of voting for orangutan Batu in the election 
 
 > http://poll.novo-sibirsk.ru/result.aspx?quiz=144
 
+UPDATED: голосование удалено с сайта новосибирской мэрии.
+
 и на сайте Госуслуг:
 
 > https://pos.gosuslugi.ru/lkp/project-contests/942/09/
@@ -86,10 +88,7 @@ Utility for monitoring the results of voting for orangutan Batu in the election 
 
 ### АВТОР УТИЛИТЫ
 
-Борщев Максим
+Маршак Максим
 
 Telegram:
 > @bormaxi
-
-Буду рад увидеть читателей этого текста в своем фейсбучике:
-> https://www.facebook.com/bormaxi/
